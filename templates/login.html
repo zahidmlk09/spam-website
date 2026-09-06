@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% block title %}Login | PhishGuard{% endblock %}
+{% block content %}
+<section class="login-page">
+	<div class="login-card">
+		<div class="security-logo" aria-hidden="true"><span class="lock-shackle"></span><span class="lock-body"><span class="keyhole"></span></span><span class="security-key"></span></div>
+		<div class="eyebrow">Protected workspace</div>
+		<h1>Welcome back.</h1>
+		<p class="login-intro">Sign in to analyze URLs, scan QR codes, and keep your private security history.</p>
+		<form method="post" class="login-form">
+			<label for="identifier">Username, email, or mobile</label>
+			<input id="identifier" name="identifier" required autocomplete="username" placeholder="Enter your account identifier">
+			<label for="password">Password</label>
+			<input id="password" name="password" type="password" required autocomplete="current-password" placeholder="Enter your password">
+			<button type="submit">Unlock PhishGuard</button>
+		</form>
+		<p class="login-switch">New to PhishGuard? <a href="{{ url_for('register') }}">Create an account</a></p>
+	</div>
+</section>
+{% endblock %}
